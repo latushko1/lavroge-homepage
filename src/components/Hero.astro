@@ -1,7 +1,8 @@
 ---
-import MarqueText from "./MarqueText";
-import MarqueWork from "./MarqueWork";
+import { MarqueText } from "./MarqueText";
+import { MarqueWork } from "./MarqueWork";
 import files from "../../public/files";
+import Marquee from "react-fast-marquee";
 
 const today = new Date();
 ---
@@ -9,7 +10,7 @@ const today = new Date();
 <div
     class="gradient_bg text-secondaryLight h-[80vh] grid place-items-center text-center border-x border-secondaryLight"
 >
-    <MarqueText client:visible />
+    <MarqueText />
 </div>
 
 <section class="py-6 border border-secondaryLight">
@@ -23,7 +24,9 @@ const today = new Date();
     </p>
 
     <div class="py-6 flex flex-col justify-center items-center">
-        <h1 class="text-[100px] text-secondaryLight font-bold">SKILLS</h1>
+        <h1 class="text-[60px] sm:text-[100px] text-secondaryLight font-bold">
+            SKILLS
+        </h1>
 
         <div class="flex justify-between gap-10">
             <div class="text-secondaryLight">
@@ -50,7 +53,7 @@ const today = new Date();
         class="py-6 border-t grid place-items-center border-secondaryLight container gradient_bg text-secondaryLight"
     >
         <h1
-            class="sm:text-[100px] text-[70px] text-secondaryLight font-bold text-center"
+            class="sm:text-[100px] text-[60px] text-secondaryLight font-bold text-center"
         >
             View examples of my work
         </h1>
@@ -77,7 +80,7 @@ const today = new Date();
     <div
         class="pt-6 items-center border-t border-secondaryLight container text-secondaryLight flex flex-col sm:flex-row flex-wrap justify-center"
     >
-        <h1 class="text-secondaryLight/20">
+        <h1 class="text-secondaryLight/20 text-center">
             &copy; {today.getFullYear()} Yegor Latushko. All rights reserved.
         </h1>
     </div>

@@ -9,4 +9,4 @@ function MarqueWork({ title, imagePath, link }) {
     )
 }
 
-export default MarqueWork
+export { MarqueWork };
