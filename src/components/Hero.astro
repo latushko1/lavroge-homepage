@@ -1,0 +1,113 @@
+---
+import MarqueText from "./MarqueText";
+import MarqueWork from "./MarqueWork";
+import files from "../../public/files";
+
+const today = new Date();
+---
+
+<div
+    class="gradient_bg text-secondaryLight h-[80vh] grid place-items-center text-center border-x border-secondaryLight"
+>
+    <MarqueText client:visible />
+</div>
+
+<section class="py-6 border border-secondaryLight">
+    <p
+        class="text-secondaryLight text-lg container border-b border-secondaryLight pb-6"
+    >
+        I am a third year student in information security at the Technological
+        College of Omsk. I'm also self-taught, I'm very interested in frontend
+        and backend and DevOps engineer. I'm very interested in creating things
+        related to technology and art.
+    </p>
+
+    <div class="py-6 flex flex-col justify-center items-center">
+        <h1 class="text-[100px] text-secondaryLight font-bold">SKILLS</h1>
+
+        <div class="flex justify-between gap-10">
+            <div class="text-secondaryLight">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>✺ ReactJS</li>
+                    <li>✺ NextJS</li>
+                    <li>✺ AstroJS</li>
+                </ul>
+            </div>
+
+            <div class="text-secondaryLight">
+                <h3>Backend</h3>
+                <ul>
+                    <li>✺ FastAPI</li>
+                    <li>✺ Postgresql</li>
+                    <li>✺ Sqlalchemy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="py-6 border-t grid place-items-center border-secondaryLight container gradient_bg text-secondaryLight"
+    >
+        <h1
+            class="sm:text-[100px] text-[70px] text-secondaryLight font-bold text-center"
+        >
+            View examples of my work
+        </h1>
+        <p class="text-secondaryLight text-xl text-center">
+            The majority of my works has been done using Tailwind CSS, ReactJS,
+            and Next.js.
+        </p>
+    </div>
+
+    <div
+        class="py-6 items-center border-t border-secondaryLight container text-secondaryLight flex flex-col sm:flex-row flex-wrap justify-center gap-6"
+    >
+        {
+            files.map((item) => (
+                <MarqueWork
+                    title={item.title}
+                    imagePath={item.imgUrl}
+                    link={item.linkUrl}
+                />
+            ))
+        }
+    </div>
+
+    <div
+        class="pt-6 items-center border-t border-secondaryLight container text-secondaryLight flex flex-col sm:flex-row flex-wrap justify-center"
+    >
+        <h1 class="text-secondaryLight/20">
+            &copy; {today.getFullYear()} Yegor Latushko. All rights reserved.
+        </h1>
+    </div>
+</section>
+
+<style>
+    .gradient_bg {
+        background-image: radial-gradient(
+                circle at center center,
+                transparent 0%,
+                rgba(255, 255, 255, 0) 99%
+            ),
+            repeating-linear-gradient(
+                0deg,
+                rgba(205, 205, 205, 0.2) 0px,
+                rgba(205, 205, 205, 0.2) 1px,
+                transparent 1px,
+                transparent 6px
+            ),
+            repeating-linear-gradient(
+                90deg,
+                rgba(205, 205, 205, 0.2) 0px,
+                rgba(205, 205, 205, 0.2) 1px,
+                transparent 1px,
+                transparent 6px
+            ),
+            linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0)
+            );
+    }
+</style>

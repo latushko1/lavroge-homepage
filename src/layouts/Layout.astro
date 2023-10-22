@@ -16,36 +16,42 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="container">
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background-color: #1e1e1e;
+		font-family: "Roboto", sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	.gradient_bg {
+		background-image: radial-gradient(
+				circle at center center,
+				transparent 0%,
+				rgba(255, 255, 255, 0) 99%
+			),
+			repeating-linear-gradient(
+				0deg,
+				rgba(205, 205, 205, 0.2) 0px,
+				rgba(205, 205, 205, 0.2) 1px,
+				transparent 1px,
+				transparent 6px
+			),
+			repeating-linear-gradient(
+				90deg,
+				rgba(205, 205, 205, 0.2) 0px,
+				rgba(205, 205, 205, 0.2) 1px,
+				transparent 1px,
+				transparent 6px
+			),
+			linear-gradient(
+				90deg,
+				rgba(255, 255, 255, 0),
+				rgba(255, 255, 255, 0)
+			);
 	}
 </style>
