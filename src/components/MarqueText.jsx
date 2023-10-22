@@ -13,13 +13,13 @@ function MarqueText() {
             <Marquee pauseOnHover={true} className='overflow-hidden text-[100px] uppercase font-bold p-2'>
                 Developer
             </Marquee> */}
-            <h1 className="overflow-hidden text-[60px] sm:text-[100px] uppercase font-bold p-2 text-left">
+            <h1 className="overflow-hidden text-[50px] sm:text-[100px] uppercase font-bold p-2 text-left">
                 fullstack
             </h1>
-            <h1 className="overflow-hidden text-[60px] sm:text-[100px] uppercase font-bold p-2">
+            <h1 className="overflow-hidden text-[50px] sm:text-[100px] uppercase font-bold p-2">
                 Web
             </h1>
-            <h1 className="overflow-hidden text-[60px] sm:text-[100px] uppercase font-bold p-2 text-right">
+            <h1 className="overflow-hidden text-[50px] sm:text-[100px] uppercase font-bold p-2 text-right">
                 Developer
             </h1>
         </div>
